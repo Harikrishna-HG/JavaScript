@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<p lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 of Learning JavaScript </title>
+  </head>
+<p>
+<h1 style="color: #8000ff;">Day 15 of learning JavaScript</h1>
+<h2>JavaScript Object Methods</h2>
+<p>Objects Methods are actions that can be performed on objects.</p>
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>firstName</td>
+    <td>Harikrishna</td>
+  </tr>
+  <tr>
+    <td>lastName</td>
+    <td>Gautam</td>
+  </tr>
+  <tr>
+    <td>age</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>eyeColor</td>
+    <td>Brown</td>
+  </tr>
+</table>
+<p id="demo"></p>
+<h2>Accessing Object Methods</h2>
+<p>syntax</p>
+<pre>
+objectName.methodName()
+  </pre>
+<h2>Displaying a JavaScript object will output [object Object]. </h2>
+
+<p> 1.Displaying the Object Properties by name</p>
+<p>2.Displaying the Object Properties in a Loop</p>
+<p>3.Displaying the Object using Object.values()</p>
+<p> 4.Displaying the Object using JSON.stringify()</p>
+</p>
+<h2>Displaying Properties in a Loop</h2>
+<p id="JavaScript"></p>
+<h2>Using JSON.stringify()</h2>
+<p>JavaScript objects can be converted to a string with JSON method JSON.stringify()</p>
+<p id="test"></p>
+
+</body>
+<script>
+  const person = {
+    firstName: "Harikrishna",
+    lastName: "Gautam",
+    id: 8848,
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+
+  document.getElementById("demo").innerHTML = person.fullName();
+  // Create an Object
+  const man = {
+    name: "Harikrishna",
+    age: 22,
+    city: "New York"
+  };
+
+  // Build a Text
+  let text = "";
+  for (let x in man) {
+    text += man[x] + " ";
+  };
+
+  // Display the Text
+  document.getElementById("JavaScript").innerHTML = text;
+
+  // Create an Object
+  const human = {
+    name: "Harish",
+    age: 22,
+    city: "New York"
+  };
+
+  // Stringify Object
+  let myString = JSON.stringify(human);
+
+  // Display String
+  document.getElementById("test").innerHTML = myString;
+</script>
+
+</html>

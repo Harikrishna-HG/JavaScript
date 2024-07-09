@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 8 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color:#8000ff">Day 8 of learning JavaScript</h1>
+
+  <h2>JavaScript Const</h2>
+
+  <p>The const keyword was introduced in ES6.</p>
+  <p>1.Variable cannot be reassigned.</p>
+  <p>2.Variable defined with const cannot be redeclared.</p>
+  <p>3.Variable defined with const have blockscope</p>
+
+  <h2>Use of const when we declare.</h2>
+  <p>1. A new Array</p>
+  <p>2. A new Object</p>
+  <p>3. A new Function</p>
+  <p>4. A new RegExp</p>
+
+  <h2>We can change the elements of constant array.</h2>
+  <h2>Change the properties of the constant object.</h2>
+  <h1>Constant Arrays</h1>
+
+  <pre>
+    /* We can create an constant array */
+    const cars = ["BMW","Mercedes","Tesla"];
+
+    /* We can change an element */
+    cars[0] = "Lamborghini";
+
+    /* We can add an element */
+     cars.push("Audi");
+
+  </pre>
+
+  <h1>Constant Objects</h1>
+
+  <pre>
+  /* We can change the properties of a constant object */
+
+  const car = { type:"fiat", model:"500", color:"White"};
+
+  /*  We can change the property */
+
+  car.color = "red";
+
+  /* We can add a [property] */
+
+  car.owner = "Harikrishna";
+  
+</pre>
+
+  <h1>Hoisting</h1>
+  <p>Variables defined with var can hoisted on the top and can be initialized at any time.</p>
+  <pre>
+  carName="Ferari";
+  var carName; 
+</pre>
+
+</body>
+
+</html>

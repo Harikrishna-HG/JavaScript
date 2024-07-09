@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 18 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff; ">Day 18 of learning of JavaScript Arrays</h1>
+  <p>An array is a special variable, which can hold more than one value: </p>
+  <p id="demo"></p>
+  <h2>The push() Method</h2>
+
+  <p>The push method appends a new element to an array.</p>
+
+  <button onclick="myFunction1()">Try it</button>
+
+  <p id="demo1"></p>
+  <h2>The isArray() Method</h2>
+  <p id="demo2"></p>
+  <h2>Basic Array Methods</h2>
+  <p>Array length</p>
+  <p>Array toString()</p>
+  <p>Array at()</p>
+  <p>Array join()</p>
+  <p>Array pop()</p>
+  <p>Array push()</p>
+  <p>Array shift()</p>
+  <p>Array unshift()</p>
+  <p>Array delete()</p>
+  <p>Array concat()</p>
+  <p>Array copyWithin()</p>
+  <p>Array flat()</p>
+  <p>Array splice()</p>
+  <p>Array toSpliced()</p>
+  <p>Array slice()</p>
+
+  <script>
+    const cars = ["BMW", "Mercedes", "Bugatti"];
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.write(fruits.length);
+    let text = "<ul>";
+    fruits.forEach(myFunction);
+    text = text + "</ul>";
+    document.getElementById("demo").innerHTML = text;
+
+    function myFunction(value) {
+      text = text + "<li>" + value + "</li>";
+    }
+    const fruits1 = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo1").innerHTML = fruits1;
+
+    function myFunction1() {
+      fruits1.push("Lemon");
+      document.getElementById("demo1").innerHTML = fruits1;
+    }
+
+    const computers = ["Apple", "HP", "Dell"]
+    document.getElementById("demo2").innerHTML = Array.isArray(computers);
+  </script>
+</body>
+
+</html>

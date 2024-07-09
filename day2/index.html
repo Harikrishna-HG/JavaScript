@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--  JavaScript can change the HTML content -->
+  <div><h2 id="demo">JavaScript can change HTML content.</h2>
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "Day2 of learning JavaScript"'>Show</button>
+</div>
+<br><br>
+<div>
+  <!-- JavaScript Can Change HTML Attribute Values -->
+  <img id="myImage" src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg" alt="Original Image" width="300">
+  <br>
+  <button onclick="changeImage()">Change Image</button>
+  <br>
+</div>
+<div>
+ <!-- JavaScript can show hidden HTML elements -->
+
+<h2 id="check" style="display:none">Hello JavaScript!</h2>
+
+<button type="button" onclick="document.getElementById('check').style.display='block'">Show</button>
+</div>
+  <script>
+      function changeImage() {
+         
+          var image = document.getElementById('myImage');
+          image.src = 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg';
+          image.alt = 'New Image';
+      }
+  </script>
+</body>
+</html>

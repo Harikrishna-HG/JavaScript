@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 16 of learning JavaScript  </title>
+</head>
+<body>
+  <h1 style="color: #8000ff;">Day 16 of learning JavaScript Object Constructors</h1>
+  <h2>JavaScript Object Constructors</h2>
+  <pre>
+    function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+  </pre>
+  <h2>We can add a method to a created object.
+  </h2>
+  <pre>
+    myMother.changeName = function (name) {
+      this.lastName = name;
+    }
+  </pre>
+  <p id="demo"></p>
+<p id="test"></p>
+<p id="test1"></p>
+
+<h2>HTML Events</h2>
+<p>An HTML event can be something the browser does, or something a user does.
+
+</p>
+<p>some examples of HTML events:</p>
+<pre>
+ 1.An HTML web page has finished loading
+ 2.An HTML input field was changed
+ 3.An HTML button was clicked
+
+</pre>
+<button onclick="document.getElementById('btn').innerHTML = Date()">The time is?</button>
+<p id="btn"></p>
+<button onclick="this.innerHTML = Date()">The time is?</button>
+<h2>List of some common HTML events:</h2>
+<table border="1" style="border-collapse: collapse;">
+  <tr>
+    <th>Event</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>onchange</td>
+    <td>An HTML element has been changed</td>
+  </tr>
+  <tr>
+    <td>onclick</td>
+    <td>The user clicks an HTML element</td>
+  </tr>
+  <tr>
+    <td>onmouseover</td>
+    <td>	The user moves the mouse over an HTML element</td>
+  </tr>
+  <tr>
+    <td>onmouseout</td>
+    <td>The user moves the mouse away from an HTML element</td>
+  </tr>
+  <tr>
+    <td>onkeydown</td>
+    <td>The user pushes a keyboard key</td>
+  </tr>
+  <tr>
+    <td>onload</td>
+    <td>The browser has finished loading the page</td>
+  </tr>
+</table>
+  <script>
+    // Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create two Person objects
+const myFather = new Person("Padam", "Gautam", 50, "blue");
+const myMother = new Person("Kamala", "Gautam", 48, "green");
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age +" years old"+ ". My mother is " + myMother.age + " years old" + "."; 
+
+document.getElementById("test").innerHTML = "My father name is " + myFather.firstName + " " + myFather.lastName +".";
+
+document.getElementById("test1").innerHTML = "My mother name is " + myMother.firstName +" "+ myMother.lastName +".";
+</script>
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 20 of learning JavaScript Array Iteration Methods & Array Constant</title>
+</head>
+<body>
+  <h1 style="color: #8000ff;">Day 20 of learning JavaScript Array Iteration Methods</h1>
+  <h1>Array Iteration Methods</h1>
+  <p>Array iteration methods operate on every array item: </p>
+
+  <h2>Array forEach()</h2>
+  <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+  <p></p>
+  <p id="demo"></p>
+
+  <h2>Array map()</h2>
+  <p>The map() method creates a new array by performing a function on each array element</p>
+  <p id="demo1"></p>
+
+  <h2>Array flatMap()</h2>
+  <p>The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.</p>
+  <p id="demo2"></p>
+
+  <h2> JavaScript Array filter()</h2>
+  <p>The filter() method creates a new array with array elements that pass a test.</p>
+  <p id="demo3"></p>
+
+  <h2>JavaScript Array reduce()</h2>
+  <p>The reduce() method runs a function on each array element to produce (reduce it to) a single value.</p>
+  <p id="demo4"></p>
+
+  <script>
+    const num = [1, 2, 3, 4, 5, 6];
+    let txt = "";
+    num.forEach(myFunction);
+    document.getElementById("demo").innerHTML = txt
+
+    function myFunction(value) {
+      txt += value + "<br>";
+    }
+
+    const num1 = [11, 22, 33, 44];
+    const num2 = num1.map(myfunc);
+
+    document.getElementById("demo1").innerHTML = num2;
+
+    function myfunc(value, index, array) {
+      return value * 2;
+    }
+
+    const myArr = [1, 2, 3, 4, 5, 6];
+    const newArr = myArr.flatMap((x) => x * 2);
+    document.getElementById("demo2").innerHTML = newArr;
+
+    const numbers = [45, 4, 9, 16, 25];
+    const over18 = numbers.filter(myFunction);
+
+    document.getElementById("demo3").innerHTML = over18;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+    let sum = numbers.reduce(myFunction);
+
+    document.getElementById("demo4").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value, index, array) {
+      return total + value;
+    }
+
+  </script>
+</body>
+
+</html>

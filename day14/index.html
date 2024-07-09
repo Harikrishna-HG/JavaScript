@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 14 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;"></h1>
+  <h2>JavaScript Object Properties</h2>
+  <p>An Object is an unordered collection of properties</p>
+  <p>Properties can be changed, added, deleted, and some are read only.</p>
+  <h2>Accessing JavaScript Properties</h2>
+
+  <p>Syntax for accessing the property of an object is</p>
+  <pre>
+    // objectName.property
+    let age = person.age;
+
+    <!-- or -->
+     objectName["property"]
+    let age = person["age"];
+
+    <!-- or -->
+    // objectName[expression]
+    let age = person[x];
+  </pre>
+
+  <p id="demo"></p>
+
+
+  <h2>Adding New Properties</h2>
+
+  <pre>
+    person.nationality = "English";
+  </pre>
+  <h2>Deleting Properties</h2>
+
+  <pre>
+    delete person.age;
+  </pre>
+
+  <h2>Nested Objects</h2>
+
+  <pre>
+    myObj = {
+      name: "Harish",
+      age:22,
+      myCars: {
+        car1:"Ford",
+        car2:"BMW",
+        car3:"Mercedes"      }
+    }
+    <h2>We can access nested objects using the dot notation or the bracket notation</h2>
+    <pre>
+      myObj.myCars.car2;
+      myObj.myCars["car2"];
+    </pre>
+  </pre>
+  <script>
+    const person = {
+      firstname: "Harikrishna",
+      lastname: "Gautam",
+      age: 22,
+      eyecolor: "brown"
+    };
+
+
+    document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+  </script>
+</body>
+
+</html>

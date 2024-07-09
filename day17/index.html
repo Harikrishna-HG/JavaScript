@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <title>Day 17 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">Day 17 of recalling JavaScript</h1>
+  <h2>JavaScript String Methods</h2>
+  <p>JavaScript strings are primitive and immutable. All string methods produce a new string without altering the
+    original string. </p>
+  <pre>
+1.String length        
+2.String charAt()
+3.String charCodeAt()
+4.String at()
+5.String [ ]
+6.String slice()
+7.String substring()
+8.String substr()
+9.String toUpperCase()
+10.String toLowerCase()
+11.String concat()
+12.String trim()
+13.String trimStart()
+14.String trimEnd()
+15.String padStart()
+16.String padEnd()
+17.String repeat()
+18.String replace()
+19.String replaceAll()
+20.String split()
+<h2> Search Methods</h2>
+21.String indexOf()
+22.String lastIndexOf()
+23.String search()
+
+24.String match()
+25.String matchAll()
+26.String includes()
+27.String startsWith()
+28.String endsWith()
+  </pre>
+  <h2>## String length </h2>
+  <p id="demo">
+  </p>
+  <h2>## String charAt()</h2>
+  <p id="demo1">
+  </p>
+
+  <h2>## String charCodeAt()</h2>
+  <p id="demo2">
+  </p>
+
+  <h2>## Extracting String Parts</h2>
+  <p id="demo3"></p>
+  <h2>The slice() Method
+    Extract a part of a string from position 7:</h2>
+  <p id="demo4">
+  </p>
+  <h2>JavaScript String substr()</h2>
+  <p id="demo5">
+  </p>
+
+  <script>
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let length = text.length;
+    document.getElementById("demo").innerHTML = length;
+    let text1 = "HELLO WORLD";
+    let char = text1.charAt(0);
+    document.getElementById("demo1").innerHTML = char;
+    const name = "W3Schools";
+    let letter = name.at(2);
+    document.getElementById("demo2").innerHTML = letter;
+
+    let fruits = "Apple, Banana, Kiwi";
+    let part = fruits.slice(7, 13);
+    document.getElementById("demo3").innerHTML = part;
+
+    let fruits1 = "Apple, Banana, Kiwi";
+    let part1 = fruits1.slice(7)
+    document.getElementById("demo4").innerHTML = part1;
+
+    let str = "Apple, Banana, Kiwi";
+    document.getElementById("demo5").innerHTML = str.substr(7, 6);
+  </script>
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Object</title>
+</head>
+<body>
+  <h1 style="color: #8000ff;">Day 13 of learning JavaScript</h1>
+  <h2>JavaScript Objects</h2>
+  <p>JavaScript object is an entity having properties and method.</p>
+  <p>JavaScript is an object-based language. Everything is an object in JavaScript. </p>
+  <h2>Creating Objects in JavaScript</h2>
+  <p>There are 3 ways to create objects.  </p>
+  <p>
+    1.By object literal</p>
+  <p>2.By creating instance of Object directly (using new keyword)</p>
+<p>    3.By using an object constructor (using new keyword)
+  </p>
+  <h2>JavaScript Object by object literal</h2>
+    <pre>object={property1:value1,property2:value2.....propertyN:valueN}  </pre>
+    <pre>
+      <script>  
+        emp={id:102,name:"Harish Gautam",salary:40000000}  
+        document.write(emp.id+" "+emp.name+" "+emp.salary);  
+        </script>  
+    </pre>
+    <h2>By creating instance of Object
+    </h2>
+    <pre>var objectname=new Object();  </pre>
+    <pre>
+      <script>  
+        var emp=new Object();  
+        emp.id=101;  
+        emp.name="Usha Gautam";  
+        emp.salary=5000000;  
+        document.write(emp.id+" "+emp.name+" "+emp.salary);  
+        </script>  
+    </pre>
+    <h2>By using an Object constructor</h2>
+    <p>The this keyword refers to the current object.    </p>
+    <pre>
+      <script>  
+        function emp(id,name,salary){  
+        this.id=id;  
+        this.name=name;  
+        this.salary=salary;  
+        }  
+        e=new emp(103,"Shova Gautam",30000000);  
+          
+        document.write(e.id+" "+e.name+" "+e.salary);  
+        </script>  
+    </pre>
+
+</body>
+</html>

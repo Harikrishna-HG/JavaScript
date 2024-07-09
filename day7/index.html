@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 7 of JavaScript Learning</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">Day 7 of learning JavaScript</h1>
+  <h2>JavaScript Let</h2>
+  <p>The Let keyword was introduced introduced in ECMAScript(6) 2015</p>
+  <p>Variables declared with let have Block Scope</p>
+  <p>Variables declared with let must be Declared before use </p>
+  <p>Variables declared with let cannot be Redeclared in the same scope</p>
+  <h2>ES6 introduced the two new JavaScript keywords: let and const</h2>
+  <h2>Variables declared with the var always have Global Scope.</h2>
+  <h1> Let cannot be Redeclared</h1>
+  <pre>
+    let x = "Harikrishna";
+    let x = 0; /* Invalid */
+  </pre>
+  <h1>Var can be Redeclared</h1>
+  <pre>
+    let x = "Harikrishna";
+    let x = 0; /* valid */
+  </pre>
+  <h2>Redeclaring a variable with let, in another block, is allowed</h2>
+  <pre>
+    let x = 2;   // Allowed
+
+{
+    let x = 3;   // Allowed
+}
+
+{
+    let x = 4;    // Allowed
+}
+</pre>
+<h1>Let Hoisting</h1>
+<h2>Variables defined with var are hoisted to the top and can be initialized at any time.</h2>
+
+ <h2></h2> Meaning: You can use the variable before it is declared:
+</h2>
+  <pre>
+    carName = "Tesla";
+    var carName; // Allowed
+  </pre>
+<h2>
+  Variables defined with let are also hoisted to the top of the block, but not initialized.
+</h2>
+<p> Using a let variable before it is declared will result in a ReferenceError</p>
+<pre>carName = "Mercedes";
+  let carName = "Tesla"; // not allowed</pre> 
+</body>
+
+</html>

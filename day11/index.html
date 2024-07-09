@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 11 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff">Day 11 of learning JavaScript</h1>
+  <h2>JavaScript Data Types</h2>
+  1.String
+  2.Number
+  3.Bigint
+  4.Boolean
+  5.Undefined
+  6.Null
+  7.Symbol
+  8.Object
+  <h2>The Object Datatype</h2>
+  <p>The object data type can contain both built-in objects, and user defined objects:</p>
+  <h3>Built-in object types can be:</h3>
+  <p>objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.</p>
+  <pre>
+    // Numbers :
+
+    let length = 16;
+    let breadth = 18;
+
+    // Strings
+
+    let color = "Green";
+    let name = "Harikrishna"
+
+    // Booleans
+
+    let x = true;
+    let y = false;
+
+    // object
+
+    const person = {
+      firstName : "Harikrishna",
+      lastName : "Gautam"
+    };
+
+    // Array object
+
+    const cars = ["BMW", "Volvo", "Tesla", "Bugatti"];
+
+
+    // Data object :
+
+    const date = new Date("2022-03-25");
+
+  </pre>
+  <h2>JavaScript Booleans</h2>
+
+  <p>Booleans can only have two values: true or false.</p>
+
+  <pre>
+    let x = 5;
+    let y = 5;
+    let z = 6;
+    (x == y) // Returns true
+    (x == z) // Returns false
+  </pre>
+
+  <h2>JavaScript Types are Dynamic</h2>
+  <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+  </p>
+
+  <pre>
+    let x; // Now x is undefined
+    x = 5; // Now x is a Number
+    x = "John"; // Now x is a String
+  </pre>
+  <h2>JavaScript Arrays </h2>
+  <p>JavaScript arrays are written with square brackets. </p>
+  <pre>
+    const cars = ["Saab", "Volvo", "BMW"];
+  </pre>
+
+  <h2>The typeof Operator</h2>
+
+  <p>We can use the JavaScript typeof operator to find the type of a JavaScript variable.</p>
+  <pre>
+    typeof ""             // Returns "string"
+typeof "Harish"         // Returns "string"
+typeof "Harish Gautam"     // Returns "string"
+  </pre>
+
+  <h2>Undefined</h2>
+  <p>In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+  </p>
+
+  <pre>
+    let car;    // Value is undefined, type is undefined
+  </pre>
+</body>
+
+
+
+</html>

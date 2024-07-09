@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 19 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">Array Search Methods</h1>
+  <h2>Array indexOf()</h2>
+  <p>The indexOf() method searches an array for an element value and returns its position.</p>
+  <p id="place"></p>
+  <h2>Array includes()</h2>
+  <p>Array Includes() allows us to check if an element is present in an array</p>
+  <p>Checking the cars array containing "BMW":</p>
+  <p id="available"></p>
+  <h2>Array find()</h2>
+  <p>The find() method returns the value of the first array element that passes a test function.</p>
+  <p id="demo"></p>
+  <h1 style="color: #8000ff;">Array Sort Methods</h1>
+  <h2>Array sort()</h2>
+  <p>The sort() method sorts an array alphabetically.</p>
+  <p id="demo1"></p>
+  <h2>Reversing an Array</h2>
+  <p>The reverse() method reverses the elements in an array.</p>
+  <p id="demo2"></p>
+
+
+
+
+  <script>
+    const cars = ["BMW", "Rolls Royce", "Bugatti", "Lamborghini"];
+    let position = cars.indexOf("Bugatti") + 1;
+    document.getElementById("place").innerHTML = "Buggati is found in position " + position;
+
+    document.getElementById("available").innerHTML = cars.includes("BMW");
+
+    const numbers = [4, 9, 16, 25, 29];
+    let first = numbers.find(myFunction);
+
+    document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+
+    document.getElementById("demo1").innerHTML = cars.sort();
+    document.getElementById("demo2").innerHTML = cars.reverse();
+
+  </script>
+
+</body>
+
+</html>
