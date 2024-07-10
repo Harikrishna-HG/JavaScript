@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 21 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff">JavaScript Date Objects</h1>
+  <h2>Using new Date()</h2>
+  <p>new Date() without arguments, creates a date object with the current date and time:</p>
+
+  <p id="demo"></p>
+  <h2>Displaying Dates</h2>
+  <h2>The getFullYear() Method</h2>
+  <p>Return the full year of a date object:</p>
+
+  <p id="demo1"></p>
+
+  <h2>The toString() Method</h2>
+
+  <p>Convert a date to a string:</p>
+  <pre>By Default</pre>
+  <p id="demo2"></p>
+
+  <h2>The toUTCString() Method</h2>
+  <p id="demo3"></p>
+
+
+  <h2>JavaScript Get Date Methods </h2>
+ 
+    <pre>
+    getFullYear()
+    Get year as a four digit number (yyyy)
+    getMonth()
+    Get month as a number(0-11)
+    getDate()
+    Get day as a number(1-31)
+    getDay()
+    Get weekday as a number(0-6)
+    getHours()
+    Get hour (0-23)
+    getMinutes()
+    get minute(0-59)
+    getSeconds()
+    Get Second(0-59)
+
+  </pre>
+  </table>
+  <h1 style="color: #8000ff">JavaScript Math Object</h1>
+  <p>The JavaScript Math object allows you to perform mathematical tasks on numbers.</p>
+  <p>The syntax for any Math property is : Math.property.</p>
+  <pre>
+    Math.E        // returns Euler's number
+    Math.PI       // returns PI
+    Math.SQRT2    // returns the square root of 2
+    Math.SQRT1_2  // returns the square root of 1/2
+    Math.LN2      // returns the natural logarithm of 2
+    Math.LN10     // returns the natural logarithm of 10
+    Math.LOG2E    // returns base 2 logarithm of E
+    Math.LOG10E   // returns base 10 logarithm of E
+  </pre>
+
+<h2>Math Methods</h2>
+<p>The syntax for Math any methods is : Math.method(number)</p>
+
+<p>There are 4 common methods to round a number to an integer:</p>
+<pre>
+  
+  Math.round(x)	Returns x rounded to its nearest integer
+  Math.ceil(x)	Returns x rounded up to its nearest integer
+  Math.floor(x)	Returns x rounded down to its nearest integer
+  Math.trunc(x)	Returns the integer part of x (new in ES6)
+
+</pre>
+  <script>
+
+
+    const d = new Date();
+    document.getElementById("demo").innerHTML = d;
+
+    document.getElementById("demo1").innerHTML = d.getFullYear();
+
+    document.getElementById("demo2").innerHTML = d.toString();
+
+    document.getElementById("demo3").innerHTML = d.toUTCString();
+
+
+  </script>
+
+</body>
+
+</html>
