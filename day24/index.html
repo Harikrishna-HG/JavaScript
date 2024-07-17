@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 24 of learning JavaScript</title>
+</head>
+<body>
+  <h1 style="color: #8000ff">JavaScript Regular Expressions </h1>
+  <h2>A regular expression is a sequence of characters that forms a search pattern.</h2>
+  <p>The search pattern can be used for text search and text replace operations.</p>
+  <pre>
+    <h2>Syntax</h2>
+    /patterns/modifiers;
+
+    Example
+
+    /researchs/i;
+
+    Explained explained :
+
+    /researhs/i is a regular expression
+    researchs is a pattern ( to be used ina search).
+    i is a modifier (modifies the search to be case-insensitive).
+  </pre>
+  <h2>Using String Methods</h2>
+<p>In JavaScript, regular expressions are often used with the two string methods:</p>
+<p>search()</p>
+<p>replace()</p>
+
+<h2>Using String search() with a string</h2>
+<p>The search() method searches a string for a specified value and returns the position of the match</p>
+
+<h3>Example</h3>
+<pre>
+  let text = "Welcome to the programming!";
+  let n = text.search("the");
+
+  <h3>The result in n will be</h3>
+  <h4>11</h4>
+</pre>
+<h2>Using String search() with a Regular Expression</h2>
+<pre>
+  let text = "Welcome to the programming!";
+  let n = text.search(/The/i);
+
+  <h3>The result in n will be</h3>
+  <h4>11</h4>
+</pre>
+<h2>Using String replace() With a String</h2>
+<p>The replace() method replaces a specified value with another value in a string:</p>
+<pre>
+let text = "Welcome Microsoft!";
+let result = text.replace("Microsoft", "Google");
+ <h3>The result will be:</h3>
+ <h4>Welcome Google</h4>
+</pre>
+ <h2>Use String replace() With a Regular Expression</h2>
+ <pre>
+  let text = "Visit Microsoft!";
+let result = text.replace(/microsoft/i, "Google");
+<h3>The result will be:</h3>
+<h4>Welcome Google</h4>
+ </pre>
+ <h1 style="color: #8000ff">JavaScript Modules </h1>
+ <h2>JavaScript modules allow you to break up your code into separate files.</h2>
+ <p>This makes it easier to maintain a code-base.
+
+ </p>
+ <p>Modules are imported from external files with the import statement.
+
+ </p>
+ <p>Modules also rely on type="module" in the &lt;script&gt; tag.</p>
+
+<h2>Export</h2>
+<p>Modules with functions or variables can be stored in any external file.</p>
+<p>There are two types of exports:</p>
+<ol>
+  <li>Named Exports</li>
+  <li>Default Exports</li>
+</ol>
+<h2>Import</h2>
+<h1 style="color: #8000ff">JavaScript Arrow Function
+</h1>
+<p>Arrow functions were introduced in ES6.</p>
+<pre>
+  Arrow functions allow us to write shorter function syntax:
+
+let myFunction = (a, b) => a * b;
+</pre>
+
+
+</body>
+</html>

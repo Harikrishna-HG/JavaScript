@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 23 of learning JavaScript</title>
+</head>
+<p>
+<h1 style="color: #8000ff; ">JavaScript Scope</h1>
+<h2>Scope determines the accessibility (visibility) of variables.</h2>
+<p>JavaScript variables have 3 types of scope:</p>
+<ul>
+  <li>Block Scope</li>
+  <li>Function Scope</li>
+  <li>Global Scope</li>
+</ul>
+<h2>Block Scope</h2>
+
+<p> let and const keyword provide Block Scope in JavaScript</p>
+<h2>Function Scope</h2>
+<p>var, let and const are similar when declared inside a function</p>
+<h2>Global Scope</h2>
+<p>Global variables can be accessed from anywhere in a JavaScript program.</p>
+<p>Variables declared with var, let and const are quite similar when declared outside a block.</p>
+
+<h1 style="color: #8000ff; ">JavaScript Errors</h1>
+  <h2>Thow, Try, Catch and Finally keyword</h2>
+  <p>The try statement defines a code block to run (to try).</p>
+
+  <p>The catch statement defines a code block to handle any error.
+
+  </p>
+  <p>The finally statement defines a code block to run regardless of the result.
+
+  </p>
+  <p>The throw statement defines a custom error.
+
+  </p>
+  <p id="demo"></p>
+  <h2>JavaScript try catch</h2>
+
+</h1>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo1" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="demo2"></p>
+<h1 style="color: #8000ff; ">JavaScript this Keyword</h1>
+<h2>In JavaScript, the this keyword refers to an object.</h2>
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+<p id="demo3"></p>
+
+
+
+
+<script>
+  try {
+    adddalert("Welcome Harikrishna!");
+  }
+  catch (err) {
+    document.getElementById("demo").innerHTML = err.message;
+  }
+
+  function myFunction() {
+    const message = document.getElementById("demo2");
+    message.innerHTML = "";
+    let x = document.getElementById("demo1").value;
+    try {
+      if (x.trim() == "") throw "empty";
+      if (isNaN(x)) throw "not a number";
+      x = Number(x);
+      if (x < 5) throw "too low";
+      if (x > 10) throw "too high";
+    }
+    catch (err) {
+      message.innerHTML = "Input is " + err;
+    }
+  }
+  // Create an object:
+const person = {
+  firstName: "Harikrishna",
+  lastName: "Gautam",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo3").innerHTML = person.fullName();
+</script>
+</body>
+
+</html>

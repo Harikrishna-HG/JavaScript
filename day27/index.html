@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 27 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">HTML DOM Methods</h1>
+  <p>HTML DOM methods are actions we can perform on HTML Elements.</p>
+  <p>HTML DOM properties are values of HTML elements that we can set or change.</p>
+  <h1 style="color: #8000ff;">The DOM Programming Interface</h1>
+  <p>In the DOM, all HTML elements are defined as objects.</p>
+  <p> A property is a value that we can get or set (like changing the content of an HTML element).</p>
+
+  <p>A method is an action you can do (like add or deleting an HTML element).</p>
+  <h3 id="demo"></h3>
+  <h1 style="color: #8000ff;">The getElementById Method</h1>
+  <p>The most common way to access an HTML element is to use the id of the element.</p>
+  <p>In the example above the getElementById method used id="demo" to find the element.</p>
+
+  <h1 style="color: #8000ff;">The innerHTML Property
+  </h1>
+  <p>The easiest way to get the content of an element is by using the innerHTML property.
+  </p>
+  <p>The innerHTML property is useful for getting or replacing the content of HTML elements.
+
+  </p>
+
+  <h1 style="color: #8000ff;">JavaScript HTML DOM Document</h1>
+  <p>The document object represents your web page.</p>
+  <h3>document.getElementById(id)</h3>
+  <p>Find an element by element id</p>
+  <h3>document.getElementsByTagName(name)</h3>
+  <p>Find elements by tag name</p>
+  <h3>document.getElementsByClassName(name) </h3>
+  <p>Find elements by class name</p>
+  <h1 style="color: #8000ff;">Changing HTML Elements</h1>
+  <h3>element.innerHTML = new html content</h3>
+  <p>Change the inner HTML of an element</p>
+  <h3>element.attribute = new value </h3>
+  <p>Change the attribute value of an HTML element</p>
+  <h3>element.style.property = new style</h3>
+  <p>Change the style of an HTML element</p>
+  <h3>element.setAttribute(attribute, value)</h3>
+  <p>Change the attribute value of an HTML element</p>
+  <h1 style="color: #8000ff;">Adding and Deleting Elements</h1>
+  <h3>Create an HTML element</h3>
+  <p>document.createElement(element)</p>
+
+  <h3>document.removeChild(element)</h3>
+  <p>Remove an HTML element</p>
+  <h3>document.appendChild(element) </h3>
+  <p>Add an HTML element
+  </p>
+  <h3>document.replaceChild(new, old)</h3>
+  <p>Replace an HTML element</p>
+  <h3>document.write(text)</h3>
+  <p>Write into the HTML output stream</p>
+  <h1 style="color: #8000ff;">Adding Events Handlers</h1>
+  <h3>Adding event handler code to an onclick event</h3>
+  <p>document.getElementById(id).onclick = function(){code}</p>
+  <h1 style="color: #8000ff;">Changing HTML Content</h1>
+  <p>The easiest way to modify the content of an HTML element is by using the innerHTML property.</p>
+  <pre>document.getElementById(id).innerHTML = new HTML
+</pre>
+  <h1 style="color: #8000ff;">Changing the Value of an Attribute</h1>
+  <p>To change the value of an HTML attribute, use this syntax:</p>
+  <pre>document.getElementById(id).attribute = new value
+
+</pre>
+  <img
+    src="https://images.pexels.com/photos/24516444/pexels-photo-24516444/free-photo-of-a-plate-of-food-with-a-candle-and-flowers.jpeg"
+    id="myImage" alt="Image Ok" style="width: 400px; height: 400px;">
+  <h1 style="color: #8000ff;">Dynamic HTML content</h1>
+  <p>JavaScript can create dynamic HTML content:
+
+  </p>
+  <p id="date"></p>
+
+
+
+  <script>
+    document.getElementById("demo").innerHTML = "Hello World!";
+
+
+    document.getElementById("myImage").src = "https://images.pexels.com/photos/26329282/pexels-photo-26329282/free-photo-of-a-plate-topped-with-figs-and-cream-cheese.jpeg";
+    document.getElementById("date").innerHTML = "Date : " + Date();
+  </script>
+</body>
+
+</html>

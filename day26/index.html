@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 26 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">JavaScript Async</h1>
+  <h4>"aysnc and await make promises easier to write"</h4>
+  <h4>async makes a function return a Promise</h4>
+  <h4>await makes a function wait for a Promise
+
+  </h4>
+  <h2 style="color: #8000ff;">Async Syntax</h2>
+  <p>The keyword async before a function makes the function return a promise:</p>
+
+  <p id="demo"> </p>
+
+  <h2 style="color: #8000ff;">Await Syntax</h2>
+  <p>The await keyword can only be used inside an async function.
+
+  </p>
+  <p>The await keyword makes the function pause the execution and wait for a resolved promise before it continues.</p>
+  <h1 style="color: #8000ff;">JavaScript async / await with setTimeout</h1>
+  <h2 id="demo1"></h2>
+
+  <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+
+  <h1 style="color: #8000ff;">JavaScript HTML DOM
+  </h1>
+  <h3>With the HTML DOM, JavaScript can access and change all the elements of an HTML document.</h2>
+    <h3>When a web page is loaded, the browser creates a Document Object Model of the page.</h3>
+
+    <h3>The HTML DOM model is constructed as a tree of Objects:</h3>
+    <img src="./HTML DOM.gif" alt="DOM Image">
+    <p>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</p>
+    <p>1.JavaScript can change all the HTML elements in the page.</p>
+    <p>2.JavaScript can change all the HTML attribute in the page</p>
+    <p>3.JavaScript can change all the CSS styles in the page.</p>
+    <p>4.JavaScript can remove existing HTML elements and attributes</p>
+    <p>5.JavaScript can add new HTML elements and attributes.</p>
+    <p>6.JavaScript can react to all existing HTML events in the page.</p>
+    <p>7.JavaScript can create new HTMl events in the page.</p>
+
+
+    <script>
+      async function getData() {
+        return "Async data fetched!";
+      }
+
+      async function displayData() {
+        try {
+          const data = await getData();
+          document.getElementById("demo").innerHTML = data;
+        } catch (error) {
+          document.getElementById("demo").innerHTML = "Error: " + error.message;
+        }
+      }
+
+      displayData();
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve) {
+          setTimeout(function () { resolve("Welcome to the JavaScript Programming"); }, 3000);
+        });
+        document.getElementById("demo1").innerHTML = await myPromise;
+      }
+
+      myDisplay();
+    </script>
+</body>
+
+</html>

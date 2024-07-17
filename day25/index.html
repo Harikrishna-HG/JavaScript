@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 25 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">JavaScript Callbacks</h1>
+  <p>A callback is a function passed as an argument to another function.</p>
+  <p>This technique allows a function to call another function.</p>
+  <p>A callback function can run after another function has finished.</p>
+  <h2>Function Sequence</h2>
+  <p>JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.</p>
+  <p id="demo"></p>
+  <h1 style="color: #8000ff;">JavaScript Sequence Control </h1>
+  <p>To have better control over when to execute a function.</p>
+  <p>e.g</p>
+  <p>when we want to do calculation, and then display the result.</p>
+  <pre>
+    function myDisplayer(some) {
+      document.getElementById("demo").innerHTML = some;
+    }
+    
+    function myCalculator(num1, num2) {
+      let sum = num1 + num2;
+      return sum;
+    }
+    
+    let result = myCalculator(5, 5);
+    myDisplayer(result);
+  </pre>
+
+  <h1 style="color: #8000ff;">Asynchronous JavaScript
+  </h1>
+  <p>Functions running in parallel with other functions are called asynchronous</p>
+  <p>A good example is JavaScript setTimeout()</p>
+  <p>The result of the calculation is:</p>
+  <p id="demo1"></p>
+  <h1 style="color: #8000ff;">JavaScript Promises</h1>
+  <p>"Producing code" is code that can take some time</p>
+  <p>"Consuming code" is code that must wait for the result</p>
+  <p>A Promise contains both the producing code and calls to the consuming code.</p>
+  <h2>Promise Syntax</h2>
+  <pre>
+      let myPromise = new Promise(function(myResolve, myReject) {
+        // "Producing Code" (May take some time)
+        
+          myResolve(); // when successful
+          myReject();  // when error
+        });
+        
+        // "Consuming Code" (Must wait for a fulfilled Promise)
+        myPromise.then(
+          function(value) { /* code if successful */ },
+          function(error) { /* code if some error */ }
+        )
+    </pre>
+
+
+
+
+
+
+  <script>
+    function myDisplayer(hero) {
+      document.getElementById("demo").innerHTML = hero;
+    }
+
+    function myFirst() {
+      myDisplayer("Hello");
+    }
+
+    function mySecond() {
+      myDisplayer("Goodbye");
+    }
+
+    myFirst();
+    mySecond();
+
+
+    setTimeout(myFunction, 3000);
+
+    function myFunction() {
+      document.getElementById("demo1").innerHTML = "I love You !!";
+    }
+  </script>
+</body>
+
+</html>
