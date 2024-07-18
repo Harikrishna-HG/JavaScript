@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">JavaScript Window - The Browser Object Model</h1>
+  <h4>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</h4>
+  <h1 style="color: #8000ff;">Window Object</h1>
+  <p>The window object is supported by all browsers.</p>
+  <p>It represents the browser's window.</p>
+  <p>All global JavaScript objects, functions and variables automatically become members of the window object.</p>
+  <p>Global variables are properties of the window object.</p>
+  <p>Global functions are methods of the window object.</p>
+  <h1 style="color: #8000ff;">JavaScript Window</h1>
+  <p>Two properties can be used to determine the size of the browser window. </p>
+  <h3>window.innerHeight</h3>
+  <li>the inner height of the browser window (in pixels)</li>
+
+
+  <h3>
+    window.innerWidth</h3>
+  <li>the inner width of the browser window (in pixels)
+  </li>
+  <p id="demo"></p>
+  <h1 style="color: #8000ff;">Other Window Methods
+  </h1>
+  <ul>
+    <li>window.open() - open a new window
+    </li>
+    <li>window.close() - close the current window
+    </li>
+    <li>window.moveTo() - move the current window
+    </li>
+    <li>window.resizeTo() - resize the current window
+    </li>
+  </ul>
+  <h1 style="color: #8000ff;">JavaScript Window Screen</h1>
+    <p>The window.screen object contains information about the user's screen. </p>
+
+    <p>Properties</p>
+    <ul>
+      <li>screen.width</li>
+      <li>screen.height</li>
+      <li>screen.availWidth
+      </li>
+      <li>screen.availHeight
+      </li>
+      <li>screen.colorDepth
+      </li>
+      <li>screen.pixelDepth
+      </li>
+    </ul>
+    <h2>Window Screen Width</h2>
+    <p id="demo1"></p>
+    <h2>Window Screen Height</h2>
+    <p id="demo2"></p>
+
+    <h1 style="color: #8000ff;">JavaScript Window Location</h1>
+    <p>The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.</p>
+    <ul>
+      <li>window.location.href returns the href (URL) of the current page</li>
+      <li>window.location.hostname returns the domain name of the web host</li>
+      <li>window.location.pathname returns the path and filename of the current page
+      </li>
+      <li>window.location.protocol returns the web protocol used (http: or https:)
+      </li>
+      <li>window.location.assign() loads a new document
+      </li>
+    </ul>
+    <h2>The window.location object</h2>
+
+    <p id="demo3"></p>
+
+
+    <script>
+      document.getElementById("demo").innerHTML =
+        "Browser inner window width: " + window.innerWidth + "px<br>" +
+        "Browser inner window height: " + window.innerHeight + "px";
+
+        document.getElementById("demo1").innerHTML = 
+"Screen width is " + screen.width;
+
+document.getElementById("demo2").innerHTML =
+"Screen Height: " + screen.height;
+
+document.getElementById("demo3").innerHTML = 
+"The full URL of this page is:  " + window.location.href;
+    </script>
+
+</body>
+
+</html>
