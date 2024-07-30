@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 30 of learning JavaScript</title>
+</head>
+
+<body>
+  <h1 style="color: #8000ff;">JavaScript window Navigator</h1>
+  <p>The window.navigator object contains information about the visitor's browser.</p>
+  <h3>Window Navigator</h3>
+  <p>The window.navigator object can be written without the window prefix.</p>
+  <ul>
+    <li>navigator.cookieEnabled</li>
+    <li>navigator.appCodeName
+    </li>
+    <li>navigator.platform
+    </li>
+  </ul>
+  <h1 style="color: #8000ff;">JavaScript Window History</h1>
+  <p>The window.history object contains the browsers history.</p>
+  <h3>Some Methods</h3>
+  <ul>
+    <li>history.back()</li>
+    <li>history.forward()</li>
+  </ul>
+  <p>The history.back() method loads the previous URL in the history list.</p>
+  <input type="button" value="Back" onclick="goBack()">
+  <p>The history.forward() method loads the next URL in the history list.</p>
+
+  <input type="button" value="Forward" onclick="goForward()">
+  <h1 style="color: #8000ff;">JavaScript Popup Boxes</h1>
+  <p>JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+
+  </p>
+  <ul>
+    <li>Alert Box</li>
+    <p>An alert box is often used if you want to make sure information comes through to the user.</p>
+    <pre>window.alert("sometext");</pre>
+
+    <li>Confirm Box</li>
+    <p>A confirm box is often used if you want the user to verify or accept something.</p>
+    <pre>window.confirm("sometext");</pre>
+    <li>Prompt Box</li>
+    <p>A prompt box is often used if you want the user to input a value before entering a page.
+
+    </p>
+    <pre>window.prompt("sometext","defaultText");</pre>
+  </ul>
+
+  <h1 style="color: #8000ff;">JavaScript Timing Events</h1>
+  <p>JavaScript can be executed in time-intervals.
+    This is called timing events.
+  </p>
+  <h4>The two key methods to use with JavaScript are:</h4>
+  <ul>
+    <li>setTimeout(function, milliseconds)</li>
+    <p>Executes a function, after waiting a specified number of milliseconds.</p>
+    <li>setInterval(function, milliseconds)</li>
+    <p>Same as setTimeout(), but repeats the execution of the function contiuously.</p>
+
+  </ul>
+  <h1 style="color: #8000ff;">JavaScript Cookies</h1>
+  <p>Cookies are data, stored in small text files, on our computer.</p>
+  <h3>Create a Cookie with JavaScript</h3>
+  <pre>
+  JavaScript can create, read, and delete cookies with the document.cookie property.
+</pre>
+  <h1 style="color: #8000ff;">Web APIs - Introduction</h1>
+  <p>A Web API is a developer's dream</p>
+  <ul>
+    <li>It can extend the functionality of the browser.</li>
+    <li>It can greatly simplify complex functions.</li>
+    <li>It can provide easy syntax to complex code.</li>
+
+  </ul>
+
+  <h2>Example: JavaScript Geolocation</h2>
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+
+  <p id="demo"></p>
+
+
+
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+
+    function goForward() {
+      window.history.forward()
+    }
+    window.alert("Sometext");
+
+    const x = document.getElementById("demo");
+
+    function getLocation() {
+      try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } catch {
+        x.innerHTML = err;
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+
+
+  </script>
+</body>
+
+</html>

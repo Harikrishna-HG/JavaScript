@@ -1,0 +1,54 @@
+ Java type casting is the process of converting a variable from one data type to another.
+
+In Java, there are two types of casting:
+
+1. AWidening Casting(automatically) - converting a smaller type to larger type size
+    byte -> short -> char -> int -> long -> float -> double
+2. Narrowing Casting(manually) - converting a larger type to a smaller size type
+
+    double -> float -> long -> int -> char -> short -> byte
+
+Java Operators are used to perform operations on variables and values.
+ Java divides the operators into the following groups:
+ 1. Arithmetic operators
+ 2. Assignment operators
+ 3. Comparison operators
+ 4. Logical operators
+ 5. Bitwise operators
+
+
+Java Strings are used for storing text
+ 
+Java String Methods:
+
+1.length() method
+2.toUpperCase() method
+3.toLowerCase()  method
+
+String Concatenation:
+
+The + operator can be used between strings to combine them. This is called concatenation.
+
+Special Characters:
+
+strings must be written within quotes, Java will misunderstand this string, and generate an error.
+
+The solution to avoid this problem, is to use the backslash escape character
+
+\n  --new line
+\r  --carriage return
+\t  --tab
+\b  --backspace
+\f  --form feed
+
+Java Math:
+
+
+
+1. Math.max(x,y)
+2. Math.min(x,y)
+3. Math.sqrt(x)
+4. Math.abs(x)
+5. Math.random();
+
+
