@@ -1,15 +1,20 @@
 <?php
 
-require_once 'connection.php';
+require_once 'Connection.php'; 
+$sql = "CREATE TABLE students (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
 
-$sql = "Create table students(id int(6) unsigned auto_increment primary key, firstname varchar(30) not null, email varchar(50), reg_date timestamp)";
+if ($conn->query($sql) === TRUE) {
+    echo "Student table created successfully";
+} else {
+    echo "Error: " . $conn->error;
+}
 
-if($conn->query($sql)==true)
-{
-  echo"Student table created successfully";
-}
-else
-{
-  echo"error: ".$conn->error;
-}
+$conn->close(); 
 ?>
+

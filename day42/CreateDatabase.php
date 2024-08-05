@@ -9,7 +9,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "CREATE DATABASE myDatabase";
+$sql = "CREATE DATABASE classroom";
 
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully!";
